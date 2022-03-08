@@ -1,13 +1,13 @@
 const sqlite3 = require("sqlite3").verbose();
 const path = require("path");
 
+/** @author: istiklal */
+
 let connectionError = null;
 const dbPath = path.resolve(__dirname, "livecodb.db");
 
 let db = new sqlite3.Database(
   dbPath,
-  // "./livecodb.db",
-  // "./livecodb.sqlite3",
   sqlite3.OPEN_READWRITE,
   (err) => {
     if (err) {
