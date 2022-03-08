@@ -101,9 +101,3 @@ div.card-text {
   cursor: pointer;
   text-decoration: underline;
 }
-
-/* {`${process.env.PUBLIC_URL}/images/permanent/frameimage.png`} */
-
-/* .standartHeight {
-  height: 80%;
-} */
