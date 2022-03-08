@@ -9,6 +9,8 @@ import {
   CardImgOverlay,
 } from "reactstrap";
 
+/** @author: istiklal */
+
 export default class AboutUs extends Component {
   render() {
     return (
