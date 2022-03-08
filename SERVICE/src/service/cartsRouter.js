@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const mailer = require("./mailerService")
 
+/** @author: istiklal */
+
 const resultList = [];
 
 router.use(bodyParser.json());
