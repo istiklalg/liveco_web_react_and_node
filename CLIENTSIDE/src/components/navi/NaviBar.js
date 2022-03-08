@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
 import CartSummary from "../cart/CartSummary";
 import * as loginActions from "../../redux/actions/loginActions";
 import {
@@ -13,7 +11,8 @@ import {
   NavLink,
   NavbarText,
 } from "reactstrap";
-// import { Link } from "react-router-dom";
+
+/** @author: istiklal */
 
 const NaviBar = (...props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,32 +100,4 @@ const NaviBar = (...props) => {
   );
 };
 
-// function mapStateToProps(state) {
-//   return {
-//     currentUser: state.loginUserReducer,
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     actions: {
-//       getSessionUser: bindActionCreators(loginActions.getSessionUser, dispatch),
-//       getToken: bindActionCreators(loginActions.getToken, dispatch),
-//       setToken: bindActionCreators(loginActions.setToken, dispatch),
-//     },
-//   };
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(NaviBar);
 export default NaviBar;
-
-
-
-// export default class NaviBar extends Component {
-//     render() {
-//         return (
-//             <div id="NaviBarContainer">
-
-//             </div>
-//         )
-//     }
-// }
