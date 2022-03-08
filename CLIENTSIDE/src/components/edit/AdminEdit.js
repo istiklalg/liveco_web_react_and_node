@@ -6,6 +6,8 @@ import LoginUser from "../common/LoginUser";
 import EditChoices from "./EditChoices";
 import EditContent from "./EditContent";
 
+/** @author: istiklal */
+
 class AdminEdit extends Component {
   render() {
     const token = getToken();
