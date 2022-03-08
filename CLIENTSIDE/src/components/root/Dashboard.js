@@ -5,10 +5,11 @@ import CategoryList from "../categories/CategoryList";
 import ProductList from "../products/ProductList";
 import SliderGalery from "../slider/SliderGalery";
 
+/** @author: istiklal */
+
 class Dashboard extends Component {
     
   render() {
-    // console.log(this.props.currentCategory);
     return (
       <div id="DashboardContainer">
         <Row>
