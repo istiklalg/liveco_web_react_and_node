@@ -14,11 +14,12 @@ import * as cartActions from "../../redux/actions/cartActions";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 
+/** @author: istiklal */
+
 alertify.set("notifier", "position", "bottom-left");
 
 class CartSummary extends Component {
   // componentDidMount() {
-  //   console.log("callaed for cart : ", this.props.cart)
   //   this.props.actions.cartTotalAmount(this.props.cart);
   // }
 
