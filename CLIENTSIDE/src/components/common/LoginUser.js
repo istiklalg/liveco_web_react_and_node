@@ -14,15 +14,11 @@ var CryptoJS = require("crypto-js");
 function LoginUser({ authUser, history, ...props }) {
   const [currentUser, setCurrentUser] = useState({ ...props.currentUser });
 
-  // console.log(CryptoJS.HmacSHA512("%%--authLIV-ECOtoken--%", SECRET_KEY).toString())
-
   function handleChange(event) {
     const { name, value } = event.target;
     setCurrentUser((previousCurrentUser) => ({
       ...previousCurrentUser,
-      // [name]: value,
       [name]: name==="password" ? CryptoJS.AES.encrypt(value, SECRET_KEY).toString() : value,
-      // [name]: name==="password" ? CryptoJS.HmacSHA1(value, SECRET_KEY).toString() : value,
     }));
   }
   
@@ -33,8 +29,6 @@ function LoginUser({ authUser, history, ...props }) {
         if (data.id) {
           console.log("User that recently logged in : ", data?.userName);
           setToken(data);
-          // history.push("/");
-          // history.push("/admin/edit");
           alertify.success(
             `${currentUser.userName} kullanıcısı olarak giriş yapıldı.`
           );
@@ -52,10 +46,8 @@ function LoginUser({ authUser, history, ...props }) {
 
   return (
     <LoginForm
-      //   category={category}
       onChange={handleChange}
       onAuth={handleAuth}
-      // error={error}
     />
   );
 }
