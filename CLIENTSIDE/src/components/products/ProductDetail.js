@@ -4,6 +4,8 @@ import TextInput from "../toolbox/TextInput";
 import TextArea from "../toolbox/TextArea";
 import { Input } from "reactstrap";
 
+/** @author: istiklal */
+
 const ProductDetail = ({
   categories,
   product,
@@ -89,22 +91,7 @@ const ProductDetail = ({
         type="file"
         label="Ürün Resmi"
         accept=".jpg, .png, .bmp"
-        // value={product.productImage?"VAR":""}
-        // value=""
         onChange={onChange}
-        // onChange={function (event) {
-        //   if (event.target.files && event.target.files[0]) {
-        //     console.log(event.target.files[0]);
-        //     loadingImage = {
-        //       image: URL.createObjectURL(event.target.files[0])
-        //     };
-        //     document.getElementById("thumbnailImage").src = event.target.files[0];
-        //     document.getElementById("thumbnailName").innerHTML = event.target.files[0].name;
-        //     console.log("input value : "+document.getElementById("fileInput").value);
-        //   }
-        // }}
-        // onBlur={ (event)=>{ if(event.target.files && event.target.files[0]){download("", event.target.files[0].name, event.target.files[0].type)} }}
-        // onBlur={event => openFile(event) }
         error={errors.productImage}
       />
 
