@@ -9,6 +9,8 @@ import {
 } from "reactstrap";
 import { Link, withRouter } from "react-router-dom";
 
+/** @author: istiklal */
+
 class CategoryListTable extends Component {
   componentDidMount() {
     this.props.actions.getCategories();
