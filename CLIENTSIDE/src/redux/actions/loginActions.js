@@ -58,8 +58,9 @@ export function getToken() {
   const tokenString = sessionStorage.getItem("livecotoken");
   const userToken = JSON.parse(tokenString);
   if (userToken && userToken?.token) {
+    /// TODO : token_that_you_are_expecting will be replace with your token
     const chipperToken = CryptoJS.HmacSHA512(
-      `%%--authLIV-ECOtoken-${userToken.id}-%`,
+      `token_that_you_are_expecting`,
       SECRET_KEY
     ).toString();
     return userToken.token === chipperToken ? userToken.token : false;
@@ -70,8 +71,9 @@ export function getSessionID() {
   const tokenString = sessionStorage.getItem("livecotoken");
   const userToken = JSON.parse(tokenString);
   if (userToken && userToken?.sessionId) {
+    /// TODO : token_that_you_are_expecting will be replace with your token
     const chipperID = CryptoJS.HmacSHA512(
-      `%%--auth(LIV-ECO)session-${userToken.id}-%`,
+      'token_that_you_are_expecting',
       SECRET_KEY
     ).toString();
     return userToken.sessionId === chipperID ? userToken.sessionId : false;
