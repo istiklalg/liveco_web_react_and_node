@@ -4,19 +4,10 @@ import { bindActionCreators } from "redux";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import * as editActions from "../../redux/actions/editActions";
 
-/*
-editChoices: [
-    { id: 1, call:"/saveproduct", name: "Ürün Ekle"},
-    { id: 2, call:"/saveproduct", name: "Ürün Düzenle"},
-    { id: 3, call:"/savecategory", name: "Kategori Ekle"},
-    { id: 4, call:"/savecategory", name: "Kategoriyi Düzenle"},
-    { id: 5, call:"/seecarts", name: "Siparişleri Gör"},
-  ],
-*/
+/** @author: istiklal */
 
 class EditChoices extends Component {
   componentDidMount() {
-    // this.props.actions.getEditChoices();
     this.props.actions.getEditChoice();
   }
 
@@ -25,7 +16,6 @@ class EditChoices extends Component {
   };
 
   render() {
-    // console.log("current edit choice in EditChoices : ", this.props.currentEditChoice);
     return (
       <div id="EditChoicesContainer">
         <Container fluid="fluid" id="CategoryListContainer">
@@ -61,8 +51,6 @@ function mapStateToProps(state) {
   return {
     editChoices: state.editChoicesListReducer,
     currentEditChoice: state.editChoiceReducer,
-    // currentCategory: state.changeCategoryReducer,
-    //   categories: state.categoryListReducer,
   };
 }
 
@@ -75,7 +63,6 @@ function mapDispachToProps(dispatch) {
         editActions.changeEditChoice,
         dispatch
       ),
-      //   getProducts: bindActionCreators(productActions.getProducts, dispatch),
     },
   };
 }
