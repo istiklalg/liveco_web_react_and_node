@@ -9,17 +9,15 @@ import NotFound from "../common/NotFound";
 import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
 import AddOrUpdateCategory from "../categories/AddOrUpdateCategory";
 import AddOrUpdateCart from "../cart/AddOrUpdateCart";
-// import SimpleReactFileUpload from "../toolbox/SimpleReactFileUpload";
 import AdminEdit from "../edit/AdminEdit";
-// import LoginForm from "../common/LoginForm";
 import LoginUser from "../common/LoginUser";
 import { getSessionUser } from "../../redux/actions/loginActions";
 import AboutUs from "./AboutUs";
 import ProductDetailView from "../products/ProductDetailView";
 
+/** @author: istiklal */
+
 function App() {
-  // const [token, setToken] = useState({});
-  // const token = getToken();
   const user = getSessionUser();
   return (
     <Container fluid="fluid" id="AppContainer">
