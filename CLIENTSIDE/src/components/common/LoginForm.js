@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Button, Label, Input, FormGroup } from "reactstrap";
 
+/** @author: istiklal */
+
 const LoginForm = ({ onAuth, onChange }) => {
   return (
     <Container id="loginFormContainer">
