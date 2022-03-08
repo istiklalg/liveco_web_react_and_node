@@ -1,6 +1,8 @@
 import React from "react";
 import { post } from "axios";
 
+/** @author: istiklal */
+
 export default class SimpleReactFileUpload extends React.Component {
   constructor(props) {
     super(props);
