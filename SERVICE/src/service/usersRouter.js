@@ -155,8 +155,10 @@ router.post("/", (req, res, next) => {
           // row bu şekilde -> {id: 1, userName: "Admin", firstName: "Eren", lastName: "Sucuoğlu"}
           // buna authToken ve sessionId ekleyeceğiz.
         }else if(row){
-          row.token = CryptoJS.HmacSHA512(`%%--authLIV-ECOtoken-${row.id}-%`, conf.REACT_SECRET_KEY).toString();
-          row.sessionId = CryptoJS.HmacSHA512(`%%--auth(LIV-ECO)session-${row.id}-%`, conf.REACT_SECRET_KEY).toString();
+          /// TODO : session token session id is generating here...
+          
+          //row.token = ;
+          //row.sessionId = ;
           console.log("Gelen cevap : ", row);
           res.json(row);
         }else{
