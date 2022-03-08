@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const db = require("./db");
 
+/** @author: istiklal */
+
 router.get("/", (req, res, next) => {
   console.log("running for [GET].../");
 
