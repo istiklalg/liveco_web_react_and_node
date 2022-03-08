@@ -5,6 +5,8 @@ import { Container, Table } from "reactstrap";
 import { getToken } from "../../redux/actions/loginActions";
 import LoginUser from "../common/LoginUser";
 
+/** @author: istiklal */
+
 const CartForm = ({ cart, cartTotalPrice, onSave, onChange, errors }) => {
   const token = getToken();
   if (!cart.id) {
