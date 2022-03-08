@@ -5,9 +5,6 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const conf = require("../seviceConfiguration");
 
-// console.log("API_PORT : ", conf.API_PORT);
-// const port = 3000;
-
 const port = conf.API_PORT;
 
 const homeRouter = require("./homeRouter");
@@ -17,9 +14,8 @@ const cartsRouter = require("./cartsRouter");
 const usersRouter = require("./usersRouter");
 const slidersRouter = require("./slidersRouter");
 
-// app.use(cors({origin: 'http://localhost:3001'}));
-// app.use(cors({origin: `http://localhost:${conf.REACT_PORT}`}));
-// app.use(cors({origin: `${conf.PROJECT_IP}:${conf.REACT_PORT}`}));
+/** @author: istiklal */
+
 app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
