@@ -4,6 +4,8 @@ const db = require("./db");
 const bodyParser = require("body-parser");
 const path = require("path");
 
+/** @author: istiklal */
+
 const resultList = [];
 
 router.use(bodyParser.json());
