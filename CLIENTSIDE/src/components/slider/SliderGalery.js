@@ -4,20 +4,9 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  // CarouselCaption
 } from "reactstrap";
 
-// function getItemList() {
-//   let url = "http://localhost:3000/sliders";
-//   fetch(url, (err, rows) => {
-//     if(err){
-//       console.error("slider parçaları alınamadı ! ", err.message);
-//       return []
-//     }else{
-//       return rows;
-//     }
-//   });
-// }
+/** @author: istiklal */
 
 var items = [
   {
@@ -51,15 +40,6 @@ var items = [
     caption: "Slide 5",
   },
 ];
-
-// var items = []
-
-// const getItemList = () => {
-//   let url = "http://localhost:3000/sliders";
-//   fetch(url).then((rows) => {
-//     items = rows;
-//   });
-// };
 
 const SliderGalery = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
