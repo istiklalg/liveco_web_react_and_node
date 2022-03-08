@@ -13,7 +13,7 @@ import { bindActionCreators } from "redux";
 import * as productActions from "../../redux/actions/productActions";
 import { withRouter } from "react-router-dom";
 
-
+/** @author: istiklal */
 
 class ProductDetailView extends Component {
   
@@ -61,10 +61,6 @@ class ProductDetailView extends Component {
   }
 }
 
-// export function getProductById(products, productId) {
-//   let product = products.find((product) => product.id === parseInt(productId)) || null;
-//   return product;
-// }
 
 function mapStateToProps(state, ownProps) {
   const productId = ownProps.match ? ownProps.match.params.productId : null;
