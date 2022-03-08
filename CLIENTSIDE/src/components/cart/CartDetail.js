@@ -6,6 +6,8 @@ import { Button, Table, Row } from "reactstrap";
 import * as cartActions from "../../redux/actions/cartActions";
 import { bindActionCreators } from "redux";
 
+/** @author: istiklal */
+
 alertify.set("notifier", "position", "bottom-left");
 
 class CartDetail extends Component {
