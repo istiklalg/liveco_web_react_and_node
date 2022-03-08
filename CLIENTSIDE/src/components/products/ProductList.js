@@ -16,9 +16,9 @@ import {
   CardSubtitle,
   Button,
   Container,
-  // CardImgOverlay,
 } from "reactstrap";
-// import { Link } from "react-router-dom";
+
+/** @author: istiklal */
 
 alertify.set("notifier", "position", "bottom-left");
 
@@ -44,8 +44,6 @@ class ProductList extends Component {
           {this.props.products.map((product) => (
             <Col md="4" lg="3" key={product.id}>
               <Card
-                // key={product.id}
-                // className="col-md-5 productCard"
                 className="my-3 standartHeight"
               >
                 <CardImg
