@@ -6,6 +6,8 @@ const path = require("path");
 const conf = require("../seviceConfiguration");
 var CryptoJS = require("crypto-js");
 
+/** @author: istiklal */
+
 const resultList = [];
 
 router.use(bodyParser.json());
@@ -75,12 +77,6 @@ router.get("/", (req, res, next) => {
   }
 });
 
-// authentication query ;
-// it returning password column value with authenticate result ;
-// 1-  SELECT password, CASE WHEN password = 'Scgl21' THEN 1 ELSE 0 END AS authentication FROM users WHERE userName='Admin';
-// SELECT CASE WHEN users.password = 'Scgl21' THEN 1 ELSE 0 END AS authentication FROM users WHERE userName='Admin';
-// SELECT users.admin, CASE WHEN users.password = 'Scgl21' THEN 1 ELSE 0 END AS authentication FROM users WHERE userName='Admin';
-
 router.post("/allow", (req, res, next) => {
   console.log("running for [POST].../users/allow");
   console.log("post request body : ", req.body);
@@ -94,35 +90,23 @@ router.post("/allow", (req, res, next) => {
     ) {
       res.json({ name: "Don't try it !!" });
     } else {
-      // let stmt = `SELECT * FROM users WHERE userName='${allowReq.userName}' AND password='${allowReq.password}' LIMIT 1;`;
-
       let stmt = `SELECT id, userName, firstName, lastName, address, city, country, phone, email, admin, isRootUser 
                   FROM users WHERE userName='${allowReq.userName}' AND password='${allowReq.password}' LIMIT 1;`;
-
-      // let stmt = `SELECT users.admin, CASE
-      //     WHEN users.password = '${allowReq.password}' THEN 1 ELSE 0
-      //     END AS authenticate FROM users WHERE userName='${allowReq.userName}';`;
-
       db.db.run(stmt, (err, row) => {
         if (err) {
           console.error(
             "Kullanıcı giriş onayı sırasında bir hata oluştu",
             err.message
           );
-          // row is like {admin: 1, authenticate: 1}
           res.json(row ? row : {});
         }
       });
     }
   }
-  // res.send(req.body);
-  //   products.push({name: req.body.name, price: req.body.price, image: req.body.image, description: req.body.description});
-  //   res.redirect("/");
 });
 
 router.post("/", (req, res, next) => {
   console.log("running for [POST].../users");
-  // console.log("post request body : ", req.body);
   let authReq = req.body ? req.body : {};
   
   if (authReq && authReq.userName && authReq.password) {
@@ -142,21 +126,16 @@ router.post("/", (req, res, next) => {
       console.log(
         "Kullanıcı adı veya şifrede (\", ', *) gibi sorunlu karakterler var"
       );
-      // res.json({ userName: "", authToken: "", sessionId: "" })
       res.status(404).json({});
     } else {
-      // console.log("No problem : ", authReq);
+
       let stmt = `SELECT id, userName, firstName, lastName, admin FROM users 
                   WHERE userName='${authReq.userName}' AND password='${authReq.password}' LIMIT 1;`;
-      // console.log("stmt : ", stmt);
       db.db.get(stmt, (err, row) => {
         if (err) {
           console.error("Kullanıcı giriş onayı sırasında bir hata oluştu", err.message);
-          // row bu şekilde -> {id: 1, userName: "Admin", firstName: "Eren", lastName: "Sucuoğlu"}
-          // buna authToken ve sessionId ekleyeceğiz.
         }else if(row){
           /// TODO : session token session id is generating here...
-          
           //row.token = ;
           //row.sessionId = ;
           console.log("Gelen cevap : ", row);
@@ -169,19 +148,9 @@ router.post("/", (req, res, next) => {
     }
   } else {
     console.log("Login Formu boş !!");
-    // res.json({ userName: "", authToken: "", sessionId: "" });
     res.status(404).json({});
   }
 });
-
-// router.put("/", (req, res, next) => {
-//   console.log("running for [PUT].../users");
-//   console.log("put request body : ", req.body);
-
-//   res.send(req.body);
-//   //   products.push({name: req.body.name, price: req.body.price, image: req.body.image, description: req.body.description});
-//   //   res.redirect("/");
-// });
 
 exports.router = router;
 exports.resultList = resultList;
