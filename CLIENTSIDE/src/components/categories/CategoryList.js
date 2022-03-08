@@ -5,6 +5,8 @@ import { bindActionCreators } from "redux";
 import * as categoryActions from "../../redux/actions/categoryActions";
 import * as productActions from "../../redux/actions/productActions";
 
+/** @author: istiklal */
+
 class CategoryList extends Component {
   componentDidMount() {
     this.props.actions.getCategories();
