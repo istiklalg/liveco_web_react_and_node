@@ -1,0 +1,109 @@
+
+.centeralContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selectableListItem {
+  cursor: pointer;
+}
+
+h3, h5 {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  opacity: 0.75;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.productCard {
+  border-radius: 8px;
+  box-shadow: 1.5px 1.5px lightgrey;
+}
+
+.detailsButton, .addCartButton {
+  width: 100%;
+}
+
+.countBadge {
+  background-color: grey;
+}
+
+.productImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.sliderImage {
+  border-radius: 8px;
+}
+
+.smallImage {
+  max-height: 40px;
+}
+
+.smallLogo {
+  max-height: 40px;
+  border: 0.5px solid white;
+  border-radius: 50%;
+}
+
+.truncateContent {
+  height: 50px;
+  overflow: hidden;
+}
+
+.inButtonLink {
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%;
+}
+
+.inButtonLink:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#istiklalLogo {
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.linkContainer {
+  overflow: hidden;
+}
+
+div.card-text {
+  padding:   0 0 1rem 0;
+}
+
+.shopImage {
+  border-radius: 5%;
+}
+
+.goBackLink:hover {
+  color: #0000ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* {`${process.env.PUBLIC_URL}/images/permanent/frameimage.png`} */
+
+/* .standartHeight {
+  height: 80%;
+} */
