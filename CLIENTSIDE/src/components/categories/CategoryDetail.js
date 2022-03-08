@@ -1,6 +1,8 @@
 import React from "react";
 import TextInput from "../toolbox/TextInput";
 
+/** @author: istiklal */
+
 const CategoryDetail = ({
   category,
   onSave,
