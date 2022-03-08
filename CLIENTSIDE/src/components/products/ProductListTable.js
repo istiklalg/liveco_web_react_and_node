@@ -8,9 +8,10 @@ import {
   Table,
   Button,
   Container,
-  // CardImgOverlay,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+
+/** @author: istiklal */
 
 alertify.set("notifier", "position", "bottom-left");
 
