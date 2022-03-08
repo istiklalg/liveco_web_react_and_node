@@ -41,21 +41,16 @@ function AddOrUpdateCart({
   }
 
   function validate(name, value) {
-    // if (name === "customerName" && value === "") {
-    // console.log("isim : ", name)
-    // console.log("doğrulama : ", validation)
     if (name && (value.includes("'") || value.includes('"') || value.includes("*"))) {
       setValidation(false);
       setErrors((previousErrors) => ({
         ...previousErrors,
-        // customerName: "Ad Soyad girmelisiniz",
         [name]: `Bu alana girdiğiniz değeri düzeltin`,
       }));
     } else {
       setValidation(true);
       setErrors((previousErrors) => ({
         ...previousErrors,
-        // customerName: "",
         [name]: "",
       }));
     }
@@ -114,8 +109,6 @@ function mapStateToProps(state, ownProps) {
 }
 
 const mapDispatchToProps = { saveCart };
-
-// bindActionCreators(cartActions.removeFromCart, dispatch),
 
 export default connect(
   mapStateToProps,
