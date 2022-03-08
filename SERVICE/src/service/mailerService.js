@@ -114,42 +114,4 @@ function sendNewCartToCustomer(orderCart) {
   }
 }
 
-//   function sendCartApprovalToCustomer(orderCart) {
-//     if (orderCart && orderCart?.cart) {
-//     //   var cartDetails = JSON.parse(orderCart.cart);
-//     //   let htmlContent = createNewCartHtmlContent(
-//     //     "SİPARİŞ BİLGİLERİNİZ",
-//     //     orderCart,
-//     //     cartDetails
-//     //   );
-
-//       // const mailOptions = {
-//       //   from: conf.EMAIL_FROM,
-//       //   to: orderCart.email,
-//       //   subject: "Siparişiniz tarafımıza ulaştı ..",
-//       //   html: htmlContent,
-//       // };
-
-//       // transporter.sendMail(mailOptions, (error, info) => {
-//       //   if (error) {
-//       //     console.log(error);
-//       //   } else {
-//       //     console.log("E-posta gönderildi -> ", info.response);
-//       //   }
-//       // });
-
-//     }
-//   }
-
-// var sampleOrder = {
-//   customerName: "Zekeriya İstiklal Güneş",
-//   phone: "05325041425",
-//   email: "istiklalg@yahoo.com",
-//   address: "Ahmet Taner Kışlalı Mah. Konutkent 2 sitesi",
-//   city: "ÇANKAYA",
-//   cart: '[{"product":{"id":14,"productName":"Kuru İncir","categoryId":1,"quantityPerUnit":"Meşhur Aydın inciri, güneşte kurutulmuş doğal incir.","unitPrice":149.99,"unitsInStock":20,"productImage":"IMG_20210509_140259.jpg"},"quantity":1},{"product":{"id":8,"productName":"Bahçeden Ayvalık Zeytini","categoryId":2,"quantityPerUnit":"undefined","unitPrice":200,"unitsInStock":10,"productImage":"ayvalık .jpg"},"quantity":1}]',
-//   totalPrice: 349.99,
-//   date: "16.06.2021 22:23:03"
-// };
-
 module.exports = { sendNewCartToAdmin, sendNewCartToCustomer };
